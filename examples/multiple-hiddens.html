@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+	<meta charset="UTF-8">
+	<title>CHIV - multiple hidden images</title>
+</head>
+<body>
+	<div id="root"></div>
+	<script src="./../src/chiv.min.js"></script>
+	<script type="text/javascript">
+
+		var marker1 = {
+		    src: './images/marker.png',
+		    top: 30,
+		    left: 180
+		}
+
+		var marker2 = {
+		    src: './images/marker.png',
+		    top: 280,
+		    left: 45,
+		    width: 387
+		}
+
+		var imageViewer = new CanvasHiddenImagesViewer({
+		    root: document.getElementById('root'),
+		    fps: 30,
+		    cursorVisible: 'pointer',
+		    radius: 100,
+		    easy: 'easeInOutCubic',
+		    duration: 0.5,
+		    backgroundImage: './images/image-black-white.jpg',
+		    hiddenImages: [marker1, marker2]
+		});
+
+	</script>
+</body>
+</html>

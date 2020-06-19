@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+	<meta charset="UTF-8">
+	<title>CHIV - single hidden image</title>
+</head>
+<body>
+	<div id="root"></div>
+	<script src="./../src/chiv.min.js"></script>
+	<script type="text/javascript">
+
+		var imageViewer = new CanvasHiddenImagesViewer({
+		    root: document.getElementById('root'),
+		    radius: 100,
+		    duration: 0.8,
+		    backgroundImage: './images/image-black-white.jpg',
+		    hiddenImages: [ { src: './images/image-color.jpg' }]
+		});
+
+	</script>
+</body>
+</html>
